@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>tuBlog</title>
+		<meta name="keywords" content=""/>
+		<meta name ="description" content=""/>
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript"></script>
+	</head>
+	<body>
+		<header>
+			<div id="logo">
+				<h1>tuBlog</h1>
+				<p style="color: #009688">Blog de ciencia y tecnología</p>
+			</div>
+			<p id="abrirMenu">MENU</p>
+		</header>
+		<div id="menu">
+			<p id="cerrarMenu">VOLVER</p>
+			<ul>
+				<li><a href="index.php">Inicio</a></li>
+				<li><a href="">Galería</a></li>
+				<li><a href="estilo.php">Estilo</a></li>
+				<li><a href="menu.html">Nuevo post</a></li>
+			</ul>	
+		</div>
+		<div id="seccion"><i>&#9658 Menú de $usuario</i></div>
+		<div id="contenido">
+			<div id="seleccion1">
+				<img class="imagenSeleccion" src="images/soloTexto.png" alt="soloTexto"/>
+				<h3>Crear post de texto</h3>
+				<p>Un post sin contenido multimedia. Estará compuesto por un título y texto al que podrás dar formato con un editor.</p>
+			</div>
+			<div id="seleccion2">
+				<img class="imagenSeleccion" src="images/soloImagen.png" alt="soloImagen"/>
+				<h3>Crear post de imagen</h3>
+				<p>Un post de una sóla imagen. Estará compuesto por un título y una imagen, ideal para imagenes destacadas.</p>
+			</div>
+			<div id="seleccion3">
+				<img class="imagenSeleccion" src="images/combinado.png" alt="combinado"/>
+				<h3>Crear post de texto e imagen</h3>
+				<p>Un post con imagen y texto. Estará compuesto por un título, una imagen y un texto que podrás dar formato con un editor.</p>
+			</div>
+		</div>
+
+		<!-- Crear solo texto -->
+		<div id="selec1Oculto">
+			<div class="divOculto">
+				<p id="cerrarSeleccion1">Cerrar ventana</p>
+				<div class="crearOculto">
+					<form method="post" action="publicar.php">
+						<input class="titulo" type="text" name="titulo" size="30" placeholder="Introduce aquí el título"/>
+						<p class="usuario">Por $usuario el día 01-03-2016</p>
+						<textarea rows="30">
+							AQUI VA WYSIWYG
+						</textarea>
+						<input type="submit" value="PUBLICAR"/>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Crear solo imagen -->
+		<div id="selec2Oculto">
+			<div class="divOculto">
+				<p id="cerrarSeleccion2">Cerrar ventana</p>
+				<div class="crearOculto">
+					<form method="post" action="publicar.php">
+						<input class="titulo" type="text" name="titulo" size="30" placeholder="Introduce aquí el título"/>
+						<p class="usuario">Por $usuario el día 01-03-2016</p>
+						<input type="file" name="imagen"/>
+						<input type="submit" value="PUBLICAR"/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Crear combinado -->
+
+		<footer>
+			<p>tuBlog 2015 - Rubén Cancelo Rodríguez</p>
+		</footer>
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</body>
+</html>

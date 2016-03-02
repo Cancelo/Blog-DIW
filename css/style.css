@@ -1,0 +1,360 @@
+/*
+	COLOR PRINCIPAL: #009688;
+	COLOR SECUNDARIO CLARO: #4DB6AC;	MAS CLARO: #E0F2F1;
+	COLOR SECUNDARIO OSCURO: #004D40;
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+body {
+	width: 100%;
+	background-image: url('../images/bg.png');
+	font-family: 'Lato', sans-serif;
+}
+/*--- CABCECERA ---*/
+header {
+	height: 60px;
+	background-color: white;
+	padding: 30px;
+	box-shadow: 0px 0px 5px gray;
+}
+
+#logo {
+	float: left;
+}
+/*--- MENU ---*/
+#abrirMenu {
+	float: right;
+	color: white;
+	padding: 20px;
+	cursor: pointer;
+	background-color: #009688;
+	border-radius: 10px;
+}
+
+#abrirMenu:hover {
+	box-shadow: 0px 0px 7px gray;
+	transition: 0.3s;
+}
+
+#cerrarMenu {
+	margin: 50px 30px 30px 30px;
+	float: right;
+	cursor: pointer;
+}
+
+#cerrarMenu:hover {
+	text-decoration: underline;
+}
+
+#menu {
+	height: 800px;
+	width: 100%;
+	background-color: #009688;
+	text-align: center;
+	color: white;
+
+	position: absolute;
+	top: -800px;
+
+	transition: ease 1s;
+}
+
+#menu ul {
+	margin-top: 100px;
+}
+
+#menu ul li {
+	margin-bottom: 30px;
+	font-size: 2em;
+	list-style: none;
+}
+
+#menu ul li a {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	border-bottom: 0px solid white;
+}
+
+#menu ul li a:hover {	
+	border-bottom: 3px solid white;
+	transition:  0.3s;
+}
+
+/*--- FORMULARIOS ---*/
+#menu form {
+	width: 200px;
+	background-color: #4DB6AC;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 1px;
+}
+
+input[type=text] {
+	background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-top: 20px;  
+    color: white;
+}
+
+input[type=text]:focus {
+	outline: none;
+}
+
+input[type=password] {
+	background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-top: 20px;
+    color: white;
+}
+
+input[type=password]:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder { color: #004D40; } /* WebKit */
+:-moz-placeholder { color: #004D40; } /* Firefox 18- */
+::-moz-placeholder { color: #004D40; } /* Firefox 19+ */
+:-ms-input-placeholder { color: #004D40; } /* IE 10+ */
+
+input[type=submit] {
+	background-color: transparent;
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+	background-color: white;
+    border: 1px solid white;
+    padding: 10px;
+    color: #4DB6AC;
+    width: 100%;
+
+    transition: 0.5s;
+}
+
+textarea {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.usuario {
+	font-size: 0.9em;
+	color: #E0F2F1;
+	padding: 20px;
+}
+
+.titulo {
+	font-size: 1.5em;
+}
+
+/*--- INDICADOR DE SECCIÓN ACTUAL ---*/
+#seccion {
+	margin-left: 50px;
+	margin-top: 20px;
+	color: #009688;
+	font-size: 0.7em;
+}
+
+/*--- CONTENIDO ---*/
+#contenido {
+	margin: 50px;
+	margin-top: 20px;
+}
+
+#posts {
+	float: left;
+	width: 65%;
+}
+
+.cabeceraPost {
+	margin-bottom: 10px;
+}
+
+.cabeceraPost h3 {
+	color: #009688;
+}
+
+.postTexto {
+	background-color: white;
+	padding: 10px;
+	box-shadow: 0px 0px 5px gray;
+	margin-bottom: 20px;
+}
+
+.postImagen {
+	background-color: white;
+	padding: 10px;
+	box-shadow: 0px 0px 5px gray;
+	margin-bottom: 20px;
+}
+
+.postCompleto {
+	background-color: white;
+	padding: 10px;
+	box-shadow: 0px 0px 5px gray;
+	margin-bottom: 20px;
+}
+/*--- BARRA LATERAL ---*/
+#lateral {
+	float: right;
+	width: 30%;
+}
+
+#banner {
+	margin-bottom: 20px;
+}
+
+#archivo {
+	background-color: white;
+	padding: 30px;
+	box-shadow: 0px 0px 5px gray;
+}
+
+@media screen and (max-width: 900px) {
+	#posts {
+		float: left;
+		width: 100%;
+	}
+	#lateral {
+		display: none;
+	}
+}
+
+/*--- PIE DE PÁGINA ---*/
+footer {
+	background-color: #004D40;
+	clear: both;
+	text-align: center;
+	height: 40px;
+	box-shadow: 0px 0px 5px gray;
+	padding-top: 20px;
+	color: white;
+}
+
+/*--- ESTILO MENU.HTML ---*/
+#seleccion1, #seleccion2, #seleccion3 {
+	height: 150px;
+	background-color: white;
+	box-shadow: 0px 0px 5px gray;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+#seleccion1:hover, #seleccion2:hover, #seleccion3:hover {
+	background-color: #E0F7FA;
+	transition: 1s;
+	cursor: pointer;
+}
+
+.imagenSeleccion {
+	float: right;
+}
+
+#selec1Oculto, #selec2Oculto, #selec3Oculto {
+	visibility: hidden;
+}
+
+.divOculto {
+	width: 100%;
+	height: 800px;
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top: 0;
+	border-radius: 2px;
+}
+
+.crearOculto {
+	background-color: #009688;
+	width: 900px;
+	height: 600px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#cerrarSeleccion1, #cerrarSeleccion2, #cerrarSeleccion3 {
+	color: white;
+	text-align: center;
+	padding: 5px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/*--- ESTILO ---*/
+
+#diseno {
+	width: 45%;
+	float: left;
+	background-color: white;
+	box-shadow: 0px 0px 5px gray;
+	margin-bottom: 30px;
+	padding: 10px;
+}
+
+#estructura {
+	width: 45%;
+	float: right;
+	background-color: white;
+	box-shadow: 0px 0px 5px gray;
+	margin-bottom: 30px;
+	padding: 10px;
+}
+
+.formEstilo input[type=text], .formEstructura input[type=text] {
+	background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #4DB6AC;
+    margin-top: 20px;  
+    color: #4DB6AC;
+}
+
+.formEstilo input[type=submit], .formEstructura input[type=submit] {
+	background-color: transparent;
+    border: 1px solid #4DB6AC;
+    padding: 10px;
+    color: #4DB6AC;
+    width: 100%;
+}
+
+.formEstilo input[type=submit]:hover, .formEstructura input[type=submit]:hover {
+	background-color: #4DB6AC;
+    border: 1px solid #4DB6AC;
+    padding: 10px;
+    color: white;
+    width: 100%;
+
+    transition: 0.5s;
+}
+
+.formEstilo div {
+	margin-bottom: 20px;
+}
+
+#color1, #color2, #color3, #color4 {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	float: left;
+	margin-right: 10px;
+}
+
+#fondo1, #fondo2, #fondo3, #fondo4 {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	float: left;
+	margin-right: 10px;
+}
