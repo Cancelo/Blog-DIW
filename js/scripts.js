@@ -1,42 +1,102 @@
-window.addEventListener('load', inicio, false);
+$(document).ready(function() {
+	$("#logo").click(function(evento) {		// Te lleva al index al ahcer click en el logo
+		window.location ="index.php";
+	});
 
-function inicio() {
-	document.getElementById("abrirMenu").addEventListener('click', mostrar, false);
-	document.getElementById("cerrarMenu").addEventListener('click', cerrar, false);
+	$("#abrirMenu").click(function(evento) {	// Cambia top de menu y hace que aparezca
+		$("#menu").css("top", "0px");
+	});
 
-	document.getElementById("seleccion1").addEventListener('click', mostrarSelec1, false);	
-	document.getElementById("seleccion2").addEventListener('click', mostrarSelec2, false);
+	$("#cerrarMenu").click(function(evento) {		// Cierra menu. Cambia top a -800, por encima de la partre visible de la web
+		$("#menu").css("top", "-800px");
+	});
+	
+	$("#seleccion1").click(function(evento) {				// Muestra o cierra seleccion1, 2 o 3. Cambia visibility a visible
+		$("#selec1Oculto").css("visibility", "visible");	// o a hidden.
+	});
 
-	document.getElementById("cerrarSeleccion1").addEventListener('click', cerrarSelec1, false);
-	document.getElementById("cerrarSeleccion2").addEventListener('click', cerrarSelec2, false);
+	$("#cerrarSeleccion1").click(function(evento) {
+		$("#selec1Oculto").css("visibility", "hidden");
+	});
 
-	document.getElementById("color1").addEventListener('click', cambiaColor, false);
-}
+	$("#seleccion2").click(function(evento) {
+		$("#selec2Oculto").css("visibility", "visible");
+	});
 
-function cambiaColor() {
-	document.getElementById("cabecera").style.width="500px";
-}
+	$("#cerrarSeleccion2").click(function(evento) {
+		$("#selec2Oculto").css("visibility", "hidden");
+	});
 
-function mostrar() {
-	document.getElementById("menu").style.top="0px";
-}
+	$("#seleccion3").click(function(evento) {
+		$("#selec3Oculto").css("visibility", "visible");
+	});
 
-function cerrar() {
-	document.getElementById("menu").style.top="-800px";
-}
+	$("#cerrarSeleccion3").click(function(evento) {
+		$("#selec3Oculto").css("visibility", "hidden");
+	});
 
-function mostrarSelec1() {
-	document.getElementById("selec1Oculto").style.visibility="visible";
-}
+	$("#color1").click(function(evento) {					// Al hacer click en color1, cambia su borde y restablece a valor inicial los otros div
+		$("#color1").css("border", "2px dashed black");		// Esto se repite dependiendo el contenedor puelsado
+		$("#color2").css("border", "1px solid gray");		// Es igual para divs de colores que divs de fondos
+		$("#color3").css("border", "1px solid gray");
+		$("#color4").css("border", "1px solid gray");
+		document.formEstilo.colorI.value = "color1";			// Establece en el campo oculto del formulario el valor correspondiente al color
+	});															// seleccionado. Se repite para los 4 colores y 4 fondos diponibles
 
-function cerrarSelec1() {
-	document.getElementById("selec1Oculto").style.visibility="hidden";
-}
+	$("#color2").click(function(evento) {
+		$("#color1").css("border", "1px solid gray");
+		$("#color2").css("border", "2px dashed black");
+		$("#color3").css("border", "1px solid gray");
+		$("#color4").css("border", "1px solid gray");
+		document.formEstilo.colorI.value = "color2";
+	});
 
-function mostrarSelec2() {
-	document.getElementById("selec2Oculto").style.visibility="visible";
-}
+	$("#color3").click(function(evento) {
+		$("#color1").css("border", "1px solid gray");
+		$("#color2").css("border", "1px solid gray");
+		$("#color3").css("border", "2px dashed black");
+		$("#color4").css("border", "1px solid gray");
+		document.formEstilo.colorI.value = "color3";
+	});
 
-function cerrarSelec2() {
-	document.getElementById("selec2Oculto").style.visibility="hidden";
-}
+	$("#color4").click(function(evento) {
+		$("#color1").css("border", "1px solid gray");
+		$("#color2").css("border", "1px solid gray");
+		$("#color3").css("border", "1px solid gray");
+		$("#color4").css("border", "2px dashed black");
+		document.formEstilo.colorI.value = "color4";
+	});
+
+	$("#fondo1").click(function(evento) {
+		$("#fondo1").css("border", "2px dashed black");
+		$("#fondo2").css("border", "1px solid gray");
+		$("#fondo3").css("border", "1px solid gray");
+		$("#fondo4").css("border", "1px solid gray");
+		document.formEstilo.fondo.value = "bg1.png";
+	});
+
+	$("#fondo2").click(function(evento) {
+		$("#fondo1").css("border", "1px solid gray");
+		$("#fondo2").css("border", "2px dashed black");
+		$("#fondo3").css("border", "1px solid gray");
+		$("#fondo4").css("border", "1px solid gray");
+		document.formEstilo.fondo.value = "bg2.png";
+	});
+
+	$("#fondo3").click(function(evento) {
+		$("#fondo1").css("border", "1px solid gray");
+		$("#fondo2").css("border", "1px solid gray");
+		$("#fondo3").css("border", "2px dashed black");
+		$("#fondo4").css("border", "1px solid gray");
+		document.formEstilo.fondo.value = "bg3.png";
+	});
+
+	$("#fondo4").click(function(evento) {
+		$("#fondo1").css("border", "1px solid gray");
+		$("#fondo2").css("border", "1px solid gray");
+		$("#fondo3").css("border", "1px solid gray");
+		$("#fondo4").css("border", "2px dashed black");
+		document.formEstilo.fondo.value = "bg4.png";
+	});
+
+})

@@ -1,4 +1,5 @@
 <?php
+# Muestra los post de la BBDD
 	include_once("mysql.inc.php");
 
 	conecta($c);
@@ -9,7 +10,7 @@
 	else {
 		mysqli_select_db($c, "BlogDIW");
 
-		$sql="SELECT * FROM post";
+		$sql="SELECT * FROM post order by fecha desc";
 
 		$resultado=mysqli_query($c, $sql);
 
@@ -18,50 +19,50 @@
 		$filas=mysqli_num_rows($resultado);
 
 			if($filas==0) {
-				echo "Todavía no ha post, pero puedes crear uno <a href='#'>aquí</a>";
+				echo "<div class='post'>Todavía no hay post :(</div>";
 			}
 			else {
 				while($registro=mysqli_fetch_array($resultado)) {
 
-					if($registro['texto']) {
+					if($registro['tipo']=="texto") {
 						echo "
-							<div class='postTexto'>
+							<div class='post'>
 								<div class='cabeceraPost'>
 									<h3>".$registro['titulo']."</h3>
-									<p>Por ".$registro['autor']." a ".$registro['fecha']."</p>
+									<p>".$registro['fecha']." por ".$registro['autor']."</p>
 								</div>
 								<div class='contenidoPost'>".$registro['contenido']."</div>
 							</div>
 						";
 					}
-					else if($registro['imagen']) {
+					else if($registro['tipo']=="imagen") {
 						echo "
-							<div class='postImagen'>
+							<div class='post'>
 								<div class='cabeceraPost'>
 									<h3>".$registro['titulo']."</h3>
-									<p>Por ".$registro['autor']." a ".$registro['fecha']."</p>
+									<p>".$registro['fecha']." por ".$registro['autor']."</p>
 								</div>
-								<img src='' alt='postImagen' width='100%' height='300px'/>
+								<img class='imagenPost' alt='imagenPost' src='visualizar_blob.php?id=".$registro['id']."'/>
 							</div>
 						";
 					}
 					else {
 						echo "
-							<div class='postCompleto'>
+							<div class='post'>
 								<div class='cabeceraPost'>
 									<h3>".$registro['titulo']."</h3>
-									<p>Por ".$registro['autor']." a ".$registro['fecha']."</p>
+									<p>".$registro['fecha']." por ".$registro['autor']."</p>
 								</div>
-								<img src="" alt='postImagen' width='100%' height='300px'/>
+								<img class='imagenPost' alt='imagenPost' src='visualizar_blob.php?id=".$registro['id']."'/>
 								<div class='contenidoPost'>".$registro['contenido']."</div>
 							</div>
 						";
 					}
-					echo "
+					/*echo "
 						<div class='thumb'>
 							<a href='visualizar_blob.php?id=".$registro['id']."''><img src='visualizar_blob.php?id=".$registro['id']."'/></a>
 						</div>
-					";										
+					";*/									
 				}
 			}
 		}

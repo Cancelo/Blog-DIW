@@ -1,0 +1,38 @@
+El Blog consta de varias secciones que se puede acceder desde el menu:
+
+	- Inicio, 
+		puede entrar cualquier usuario. Siempre visible.
+	- Galeria, 
+		puede entrar cualquier usuario. Siempre visible.
+	- Estilo, 
+		desde aquí se podrá cambiar el estilo y la estructura del Blog. Solo puede entrar el usuario admin que está registrado. No visible hasta que exista la session del usuario registardo.
+	- Menu de %usuario, 
+		en este caso menu de admin, desde aquí podrá crear los posts. Sólo visible al registrarse.
+		
+	Se ha creado una carpeta images de muestra, las cuelaes se pueden utilizar para crear posts.
+		
+	Se recomienda que las imagenes subidas tengan un ancho mínimo especificado en la sección correspondiente. Hará que el Blos conserve su estilo
+	Es necesario tener habilitado las COOKIES y JAVASCRIPT.
+	
+	El usuario será admin y la contraseña root.
+	
+	El Blog es responsive en la medidad de lo posible, variando el tamaño de ciertas secciones o desapareciendo algunas en función de la resolución.
+	
+	En la sección estilo, se recomienda no poner el ancho del Blog en tamñaos demasiado pequeños.
+	
+	En la sección estilo, se recomienda no aumentar el tamaño de fuente demasiado ya que el Blog perdería parte de la estructura. Esta sección de
+	modificación de estructura se ha hecho debido a la fnalidad del proyecto.
+	
+	Si se selecciona por defecto en la tipografía pondrá la tipografía original en este caso Roboto
+	
+	Respecto al CSS:
+	
+	El css es una archivo php (style.php) ya que toma valores de la base de datos y las alamcena en variables que se utilizaran posteriormente. Debido el
+	header content, al ejecutar la web este archivo se comporta como como un CSS. Esto es útil ya que puedeo almacenar valores en varibales
+	que utilizaré a lo largo de el css.
+	
+	BBDD:
+	
+	IMPORTANTE!!! -> El archivo a importar en la BBDD se llama blogdiw.sql. Previamente debe crearse la Base de datos BlogDIW
+	
+	

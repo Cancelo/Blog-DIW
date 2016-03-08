@@ -17,7 +17,7 @@
 			</div>
 			<p id="abrirMenu">MENU</p>
 		</header>
-		<div id="seccion"><i>&#9658; Portada</i></div>
+		<div id="seccion"><i>&#9658; Galeria</i></div>
 		<div id="menu">
 			<p id="cerrarMenu">VOLVER</p>
 			<ul>
@@ -25,7 +25,7 @@
 				<li><a href="galeria.php">Galería</a></li>
 
 				<?php
-					session_start();
+					session_start();			// Si session no iniciada muestro login, sino muestro menu usuario, estilo y cerrar sesión
 
 					if(!isset($_SESSION['usuario'])) {					
 				?>
@@ -49,20 +49,7 @@
 			</ul>				
 		</div>
 		<div id="contenido">
-			<div id="posts">
-				<?php include("mostrarPost.php"); ?>
-			</div>
-			<div id="lateral">
-				<div id="banner">
-					<img src="images/banner.jpg" alt="ads"/>
-				</div>
-				<div id="archivo">
-					<h3>Últimas publicaciones</h3>
-					<ul>
-						<?php include("mostrarUltimos.php"); ?>
-					</ul>
-				</div>
-			</div>
+				<?php include("mostrarBlob.php"); ?>
 		</div>
 		<footer>
 			<p>tuBlog 2015 - Rubén Cancelo Rodríguez</p>
