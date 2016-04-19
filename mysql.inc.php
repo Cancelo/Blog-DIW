@@ -1,32 +1,32 @@
 <?php
 
-/* Descripción:
+/* DescripciÃ³n:
 
-Este script contiene los datos de conexion a la BD y una función que nos
-conecta a la BD y nos devuelve un canal de conexión
+Este script contiene los datos de conexion a la BD y una funciÃ³n que nos
+conecta a la BD y nos devuelve un canal de conexiÃ³n
 
 */
 
 // estos son los parametros de conexion a la BD
 
 	// servidor donde se encuentra la BD	
-$mysql_server="localhost";		
+$mysql_server="";		
 
   // usuario MySQL que utilizo en la conexion
 
-$mysql_login="root";			  
+$mysql_login="";			  
 
 	// passwd del usuario en MySQL																													
-$mysql_pass="admin";			  
+$mysql_pass="";			  
 
-// creo una variable $c sin asignarle ningún valor
-// para que pueda recoger el identificador de conexión
+// creo una variable $c sin asignarle ningÃºn valor
+// para que pueda recoger el identificador de conexiÃ³n
 // una vez que se haya establecido esta
 
 $c;
 
 /* como pretendo que el valor del identificador
- sea usado fuera de la función, para recuperar su valor
+ sea usado fuera de la funciÃ³n, para recuperar su valor
  pasaremos ese valor por referencia anteponiendo & al
  nombre de la variable */
 
@@ -39,10 +39,10 @@ function conecta(&$c){
     if($c=mysqli_connect($mysql_server,$mysql_login,$mysql_pass)){
           // todo correcto
     }else{
-	  echo "<br/>No ha podido realizarse la conexión a la BD<br/>";	
+	  echo "<br/>No ha podido realizarse la conexiÃ³n a la BD<br/>";	
     }
 }
 
-// esta función asignará a $c el valor del identificador de la BBDD abierta
+// esta funciÃ³n asignarÃ¡ a $c el valor del identificador de la BBDD abierta
 
 ?>
